@@ -1,0 +1,29 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+
+version = '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main']
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Hyperspace Website',
+                   'Implementation-Version': version
+    }
+}
+
+dependencies {
+    compile group: 'io.vertx', name: 'vertx-core', version: '3.0.0'
+}
+
+buildDir = 'bin'
