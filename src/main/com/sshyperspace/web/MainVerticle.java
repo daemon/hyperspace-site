@@ -1,4 +1,4 @@
-package com.sshyperspace;
+package com.sshyperspace.web;
 
 import io.vertx.core.AbstractVerticle;
 
