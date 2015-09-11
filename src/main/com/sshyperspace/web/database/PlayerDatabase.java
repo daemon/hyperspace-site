@@ -13,7 +13,7 @@ public interface PlayerDatabase
    * @return the player, null if not found */
   @Nullable Player findPlayerByName(String name) throws SQLException;
 
-  /** Enumerates best {@code nPlayers} in database by a specified integer property
+  /** Enumerates best <code>nPlayers</code> in database by a specified integer property
    *
    * @param nPlayers the number of players to return
    * @param property the property to sort by
