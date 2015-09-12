@@ -30,12 +30,12 @@ public class Player
     this._properties = properties;
   }
 
-  public String getName()
+  public String name()
   {
     return this._name;
   }
 
-  public int getProperty(Property property)
+  public int property(Property property)
   {
     return this._properties.get(property);
   }

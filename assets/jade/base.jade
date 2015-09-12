@@ -1,0 +1,22 @@
+!!! 5
+html
+  head
+    title = page_name
+    link(href='https://fonts.googleapis.com/css?family=Oswald', rel='stylesheet', type='text/css')
+    link(href='/css/style.css', rel='stylesheet', type='text/css')
+    script(src='/js/menu.js')
+  body
+    #container
+      #top-header
+        button.top-btn ABOUT
+        button.top-btn STATS
+          .row
+            button.sub-btn PLAYER
+            button.sub-btn ZONE
+            button.sub-btn LEAGUE
+        img(src='/images/logo.png')
+        button.top-btn TOOLS
+        button.top-btn FORUM
+      #main-content
+        block content
+

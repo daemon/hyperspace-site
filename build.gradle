@@ -15,16 +15,21 @@ sourceSets {
     }
 }
 
-jar {
+task fatJar(type: Jar) {
     manifest {
         attributes 'Implementation-Title': 'Hyperspace Website',
-                   'Implementation-Version': version
+                   'Implementation-Version': version,
+                   'Main-Class': 'com.sshyperspace.web.MainVerticleTemporary'
     }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
 }
 
 dependencies {
     compile group: 'io.vertx', name: 'vertx-core', version: '3.0.0'
+    compile group: 'io.vertx',  name: 'vertx-web', version: '3.0.0'
     compile group: 'mysql', name: 'mysql-connector-java', version: '5.+'
+    compile group: 'de.neuland-bfi', name: 'jade4j', version: '0.4.+'
 }
 
 buildDir = 'bin'

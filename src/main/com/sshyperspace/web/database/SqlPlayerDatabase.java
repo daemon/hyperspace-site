@@ -57,7 +57,7 @@ public class SqlPlayerDatabase implements PlayerDatabase
   }
 
   @Override
-  public @Nullable Player findPlayerByName(String name) throws SQLException
+  public @Nullable Player findPlayer(String name) throws SQLException
   {
     ResultSet set = this._findPlayerByNameStmt.executeQuery();
     Player player = null;
@@ -69,7 +69,7 @@ public class SqlPlayerDatabase implements PlayerDatabase
   }
 
   @Override
-  public synchronized List<Player> getTopPlayerList(int nPlayers, Player.Property property) throws SQLException
+  public synchronized List<Player> topPlayerList(int nPlayers, Player.Property property) throws SQLException
   {
     int propIndex = property.ordinal();
     this._getTopPlayerStmts[propIndex].setInt(0, nPlayers);

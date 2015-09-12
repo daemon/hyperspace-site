@@ -11,7 +11,7 @@ public interface PlayerDatabase
    *
    * @param name the name of the player, case insensitive
    * @return the player, null if not found */
-  @Nullable Player findPlayerByName(String name) throws SQLException;
+  @Nullable Player findPlayer(String name) throws SQLException;
 
   /** Enumerates best <code>nPlayers</code> in database by a specified integer property
    *
@@ -19,5 +19,5 @@ public interface PlayerDatabase
    * @param property the property to sort by
    * @return the players in descending order of wealth
    */
-  List<Player> getTopPlayerList(int nPlayers, Player.Property property) throws SQLException;
+  List<Player> topPlayerList(int nPlayers, Player.Property property) throws SQLException;
 }
