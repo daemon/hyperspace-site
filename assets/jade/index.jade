@@ -1,0 +1,10 @@
+extends ./base.jade
+
+block content
+  for news_item in news
+    .news-item
+      .news-header
+        .title #{news_item.title}
+        .date 9/11/2015
+      p.news-body #{news_item.body}
+    hr

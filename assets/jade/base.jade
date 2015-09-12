@@ -2,21 +2,17 @@
 html
   head
     title = page_name
+    link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro', rel='stylesheet', type='text/css')
     link(href='https://fonts.googleapis.com/css?family=Oswald', rel='stylesheet', type='text/css')
     link(href='/css/style.css', rel='stylesheet', type='text/css')
-    script(src='/js/menu.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
   body
     #container
       #top-header
-        button.top-btn ABOUT
-        button.top-btn STATS
-          .row
-            button.sub-btn PLAYER
-            button.sub-btn ZONE
-            button.sub-btn LEAGUE
+        a(href='#').top-btn ABOUT
+        a(href='#').top-btn STATS
         img(src='/images/logo.png')
-        button.top-btn TOOLS
-        button.top-btn FORUM
+        a(href='#').top-btn TOOLS
+        a(href='#').top-btn FORUM
       #main-content
         block content
-
